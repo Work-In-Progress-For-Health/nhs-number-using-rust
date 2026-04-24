@@ -1,19 +1,24 @@
 [package]
 name = "nhs-number"
-version = "0.3.0"
+version = "1.0.0"
 edition = "2024"
 authors = ["Joel Parker Henderson <joel.henderson@wales.nhs.uk>"]
 description = "National Health Service (NHS) number for NHS England, NHS Wales, NHS Isle of Man."
 license = "MIT OR Apache-2.0 OR GPL-2.0 OR GPL-3.0 OR BSD-3-Clause"
 repository = "https://github.com/GIG-Cymru-NHS-Wales/nhs-number-using-rust/"
 readme = "README.md"
-keywords = ["GIGCymru", "NHSWales", "health", "iechyd"]
+keywords = ["health", "iechyd", "united-kingdom", "national-health-service", ]
 categories = ["science", "data-structures", "value-formatting"]
 include = ["src/**/*", "LICENSE.md", "README.md"]
 
 [dependencies]
-rand = "0.9.1"
-serde = { version = "1.0.219", features = ["derive"] }
+rand = "0.10.1"
+serde = { version = "1.0.228", features = ["derive"] }
 
-[dev-dependencies]
-rustdoc-llms = "0.1.0"
+# Note: `rustdoc-llms` is a binary tool used during the release process to
+# regenerate `llms.txt` / `llms.json`. Install it separately:
+#
+#     cargo install rustdoc-llms
+#
+# It is deliberately NOT listed as a dev-dependency because it is a binary
+# crate with no lib target — Cargo would warn and ignore it.

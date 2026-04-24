@@ -1,5 +1,5 @@
 use crate::NHSNumber;
-use rand::Rng;
+use rand::RngExt;
 use std::ops::RangeInclusive;
 use std::sync::LazyLock;
 

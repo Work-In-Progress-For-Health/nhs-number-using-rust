@@ -20,7 +20,13 @@ cargo doc
 
 ## AI
 
-Run:
+If `rustdoc-llms` is not already installed, install it once:
+
+```sh
+cargo install rustdoc-llms
+```
+
+Then regenerate the LLM-friendly docs:
 
 ```sh
 rustdoc-llms
